@@ -49,8 +49,8 @@ function Past() {
                     zIndex: -1,
                 }}
             />
-                <h1 className = "header">Loading...</h1>
-                <img src={loadingSpin} alt="Loading..." />
+                <h2 className = "header">Loading...</h2>
+                <img src={loadingSpin} alt="Loading..." width = "150" height = "150" />
             </div>
         );
     }
@@ -109,11 +109,11 @@ function Past() {
                 }}
             />
             <div className = "header">
-                <h1>Time Period: 1920s</h1>
+                <h2>Past Timeline Data Rendering!</h2>
             </div>
             
             <Link to="/">
-                <Button color="info" variant="contained">Return to Homepage</Button>
+                <Button color="error" variant="contained">Return to Homepage</Button>
             </Link>
         </div>
     );

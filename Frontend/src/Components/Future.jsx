@@ -1,5 +1,6 @@
 import background from '../images/background.png';
 import loadingSpin from '../images/loading.gif';
+import futureImage from '../images/future.png';
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
@@ -36,7 +37,7 @@ function Past() {
                 <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${futureImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -48,8 +49,8 @@ function Past() {
                     zIndex: -1,
                 }}
             />
-                <h1 className = "header">Loading...</h1>
-                <img src={loadingSpin} alt="Loading..." />
+                <h2>Loading...</h2>
+                <img src={loadingSpin} alt="Loading..." width = "150" height = "150" />
             </div>
         );
     }
@@ -60,7 +61,7 @@ function Past() {
                 <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${futureImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -91,11 +92,11 @@ function Past() {
     }
 
     return (
-        <div className="futurePage">
+        <div>
             <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${futureImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -106,13 +107,13 @@ function Past() {
                     backgroundSize: 'cover',
                     zIndex: -1,
                 }}
-            />
-            <div className = "header">
-                <h1>Time Period: 1920s</h1>
+                />
+            <div>
+                <h2>Future Timeline Data Rendering!</h2>
             </div>
             
             <Link to="/">
-                <Button color="info" variant="contained">Return to Homepage</Button>
+                <Button color="error" variant="contained">Return to Homepage</Button>
             </Link>
         </div>
     );
