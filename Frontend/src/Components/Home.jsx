@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 function Home()
 {
     return (
-      <div>
+      <div className ="homePage">
         <div
         className="bg"
         style={{
