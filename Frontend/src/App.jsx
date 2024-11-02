@@ -1,34 +1,37 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {Routes, Route} from "react-router-dom";
+
+import spinningGears from './images/spinningGears.gif'
+import background from './images/background.png'
+import logo from './images/logo.jpeg'
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from './Components/Home';
+import Past from './Components/Past';
+import Present from './Components/Present';
+import Future from './Components/Future';
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+function App() {
+
+  
+
+return (
+  <div>
+      <header>
+        <img src = {logo} height = "200" width = "200" />
+        <h1>Steampunk Era Timeline</h1>
+       </header>
+
+
+       <Routes>
+          <Route path = '/' element = {<Home />} />
+          <Route path = '/timeline/past' element = {<Past />} />
+          <Route path = '/timeline/present' element = {<Present />} />
+          <Route path = '/timeline/future' element = {<Future />} />
+       </Routes>
+    </div>   
+   
   )
 }
 

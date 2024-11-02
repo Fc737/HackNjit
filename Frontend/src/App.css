@@ -33,10 +33,40 @@
   }
 }
 
+.bg { 
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .card {
   padding: 2em;
+}
+
+.steampunk
+{
+  font-family: 'Steampunk', sans-serif;
 }
 
 .read-the-docs {
   color: #888;
 }
+
+.column {
+  float: left;
+}
+
+.left, .right {
+  width: 10%;
+}
+
+.middle {
+  width: 80%;
+}
+
+
+
