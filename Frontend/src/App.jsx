@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 
 import spinningGears from './images/spinningGears.gif'
 import background from './images/background.png'
-import logo from './images/logo.jpeg'
+import logo from './images/logo.gif'
 
 import './App.css'
 
@@ -19,10 +19,25 @@ function App() {
 return (
   <div>
       <header>
-        <img src = {logo} height = "200" width = "200" />
-        <h1>Steampunk Era Timeline</h1>
+        <img src = {logo} height = "200" width = "300" />
+        <h1 class = "header">Steampunk Era Timeline</h1>
        </header>
 
+       <div style={{ position: 'fixed', left: 0, overflow: 'hidden', backgroundSize: 'cover' }}>
+        <img 
+          src={spinningGears} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+          alt="Spinning Gears Left"
+        />
+        </div>
+
+      <div style={{ position: 'fixed', right: 0, overflow: 'hidden', backgroundSize: 'cover' }}>
+      <img 
+        src={spinningGears} 
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        alt="Spinning Gears Right"
+      />
+      </div>
 
        <Routes>
           <Route path = '/' element = {<Home />} />

@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+.header
+{
+  font-family: 'Cinzel Decorative', cursive; /* Set Cinzel Decorative as the default font for the body */
+  background: url('./images/background.png') no-repeat center center fixed; /* Optional: Add background */
+  background-size: cover; /* Optional: Cover the entire background */
+}
+
+.homePage, .pastPage, .presentPage, .futurePage
+{
+  font-family: 'Cinzel Decorative', cursive; /* Set Cinzel Decorative as the default font for the body */
+  background: url('./images/background.png') no-repeat center center fixed; /* Optional: Add background */
+  background-size: cover; /* Optional: Cover the entire background */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
