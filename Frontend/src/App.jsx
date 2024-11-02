@@ -11,6 +11,7 @@ import Home from './Components/Home';
 import Past from './Components/Past';
 import Present from './Components/Present';
 import Future from './Components/Future';
+import Event from './Components/Event';
 
 function App() {
 
@@ -46,6 +47,8 @@ return (
           <Route path = '/timeline/past' element = {<Past />} />
           <Route path = '/timeline/present' element = {<Present />} />
           <Route path = '/timeline/future' element = {<Future />} />
+          <Route path = '/timeline/event/:id' element = {<Event />} />
+          <Route path = '*' element = {<Home />} />
        </Routes>
     </div>   
    
