@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+.container{
+  overflow:hidden;
+  position: relative;
+}
+
+body {
+  height: 200vh; 
+  margin: auto; 
+}
+
+.page1{
+  background-color: red;
+}
+.page2{
+  background-color: blue;
+}
+.page3{
+  background-color: green;
+}
+
+
+
