@@ -23,7 +23,7 @@ function Home()
           zIndex: -1,             
         }}/>
     
-      <h3>Timetravel by clicking one of the buttons down below: </h3>
+      <h4>Timetravel by clicking one of the buttons down below: </h4>
         <footer className="homeFooter">
                 <ButtonGroup variant="contained" aria-label="Basic button group">
                   <Link to="/timeline/past">

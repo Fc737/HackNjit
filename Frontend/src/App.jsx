@@ -20,7 +20,7 @@ return (
   <div>
       <header>
         <img src = {logo} height = "200" width = "300" />
-        <h1 class = "header">Steampunk Era Timeline</h1>
+        <h2>Steampunk Era Timeline</h2>
        </header>
 
        <div style={{ position: 'fixed', left: 0, overflow: 'hidden', backgroundSize: 'cover' }}>
@@ -29,7 +29,9 @@ return (
           style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
           alt="Spinning Gears Left"
         />
+        
         </div>
+        
 
       <div style={{ position: 'fixed', right: 0, overflow: 'hidden', backgroundSize: 'cover' }}>
       <img 
