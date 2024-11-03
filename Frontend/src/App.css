@@ -5,6 +5,7 @@
   font-family: 'Cinzel Decorative', cursive; /* Set Cinzel Decorative as the default font for the body */
   background: url('./images/background.png') no-repeat center center fixed; /* Optional: Add background */
   background-size: cover; /* Optional: Cover the entire background */
+  color: white;
 }
 
 .homePage, .pastPage, .presentPage, .futurePage
@@ -83,6 +84,4 @@
 .middle {
   width: 80%;
 }
-
-
 

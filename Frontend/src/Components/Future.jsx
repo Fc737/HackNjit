@@ -9,7 +9,8 @@ import axios from 'axios';
 function Past() {
     const [loading, setLoading] = useState(true);
     const [future, setFutureData] = useState('');
-    const [error, setError] = useState(false); 
+    const [error, setError] = useState(false);
+    const [entries, setEntries] = useState(Object.entries(future));
 
     useEffect(() => {
         async function getData() {
@@ -108,8 +109,29 @@ function Past() {
                     zIndex: -1,
                 }}
                 />
-            <div>
+            <div className='header'>
                 <h2>Future Timeline Data Rendering!</h2>
+                <table style={{display: 'grid', justifyContent: 'center', alignItems: 'center'}}>
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Height</th>
+                                <th>Weight</th>
+                            </tr>
+                            {
+                                  entries.map(([key,value])=>(
+                                        <tr>
+                                            <li key={key}>{value}</li>
+                                        </tr>
+                                   ))
+                            }
+                           
+
+                        </thead>
+                    </tbody>
+                </table>
             </div>
             
             <Link to="/">

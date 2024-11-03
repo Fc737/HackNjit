@@ -10,6 +10,7 @@ function Past() {
     const [loading, setLoading] = useState(true);
     const [past, setPastData] = useState('');
     const [error, setError] = useState(false); 
+    const [entries, setEntries] = useState(Object.entries(past));
 
     useEffect(() => {
         async function getData() {
@@ -108,8 +109,27 @@ function Past() {
                     zIndex: -1,
                 }}
                 />
-            <div>
+            <div className='header'>
                 <h2>Past Timeline Data Rendering!</h2>
+                <table style={{display: 'grid', justifyContent: 'center', alignItems: 'center'}}>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Height</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                  entries.map(([key,value])=>(
+                                        <tr>
+                                            <li key={key}>{value}</li>
+                                        </tr>
+                                   ))
+                            }
+                        </tbody>
+                </table>
             </div>
             
             <Link to="/">

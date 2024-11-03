@@ -3,6 +3,7 @@ import background from '../images/background.png'
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import {Link} from 'react-router-dom';
+import { withTheme } from '@emotion/react';
 
 function Home()
 {
@@ -20,10 +21,10 @@ function Home()
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          zIndex: -1,             
+          zIndex: -1,            
         }}/>
     
-      <h4>Timetravel by clicking one of the buttons down below: </h4>
+      <h4 style={{color: 'white', fontFamily: 'Cinzel Decorative, cursive'}}>Timetravel by clicking one of the buttons down below: </h4>
         <footer className="homeFooter">
                 <ButtonGroup variant="contained" aria-label="Basic button group">
                   <Link to="/timeline/past">
