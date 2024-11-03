@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Past() {
+function Future() {
     const [loading, setLoading] = useState(true);
     const [future, setFutureData] = useState('');
     const [error, setError] = useState(false); 
@@ -119,4 +119,4 @@ function Past() {
     );
 }
 
-export default Past;
+export default Future;

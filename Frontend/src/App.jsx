@@ -21,7 +21,7 @@ return (
   <div>
       <header>
         <img src = {logo} height = "200" width = "300" />
-        <h2>Steampunk Era Timeline</h2>
+        <h2 className = "homePage">Steampunk Era Timeline</h2>
        </header>
 
        <div style={{ position: 'fixed', left: 0, overflow: 'hidden', backgroundSize: 'cover' }}>

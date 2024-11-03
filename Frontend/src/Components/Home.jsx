@@ -4,6 +4,10 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import {Link} from 'react-router-dom';
 
+import PastCard from './PastCard';
+import PresentCard from './PresentCard';
+import FutureCard from './FutureCard';
+
 function Home()
 {
     return (
@@ -24,42 +28,12 @@ function Home()
         }}/>
     
       <h4>Timetravel by clicking one of the buttons down below: </h4>
-        <footer className="homeFooter">
-                <ButtonGroup variant="contained" aria-label="Basic button group">
-                  <Link to="/timeline/past">
-                    <Button sx={{ 
-                    backgroundColor: 'red', 
-                    '&:hover': { 
-                      backgroundColor: 'darkbrown' 
-                    } 
-                    }}>
-                      <h2>Past</h2>
-                    </Button>
-                  </Link>
+        <footer className="container">
         
-                  <Link to="/timeline/present">
-                  <Button sx={{ 
-                    backgroundColor: 'brown', 
-                    '&:hover': { 
-                      backgroundColor: 'darkbrown' 
-                    } 
-                    }}>
-                      <h2>Present</h2>
-                    </Button>
-                  </Link>
-        
-                  <Link to="/timeline/future">
-                  <Button sx={{ 
-                    backgroundColor: 'green', 
-                    '&:hover': { 
-                      backgroundColor: 'darkbrown' 
-                    } 
-                    }}>
-                      <h2>Future</h2>
-                    </Button>
-                  </Link>
-                </ButtonGroup>
-              </footer>
+        {<PastCard />}
+        {<PresentCard />}
+        {<FutureCard />}
+            </footer>
     
       </div>
     

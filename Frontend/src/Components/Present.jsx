@@ -1,5 +1,6 @@
 import background from '../images/background.png';
 import loadingSpin from '../images/loading.gif';
+import presentImage from '../images/present.jpg';
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
@@ -36,7 +37,7 @@ function Present() {
                 <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${presentImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -48,7 +49,7 @@ function Present() {
                     zIndex: -1,
                 }}
             />
-                <h2 className = "header">Loading...</h2>
+                <h2>Loading...</h2>
                 <img src={loadingSpin} alt="Loading..." width = "150" height = "150" />
             </div>
         );
@@ -60,7 +61,7 @@ function Present() {
                 <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${presentImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -91,11 +92,11 @@ function Present() {
     }
 
     return (
-        <div className="presentPage">
+        <div>
             <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${background})`,
+                    backgroundImage: `url(${presentImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -106,9 +107,12 @@ function Present() {
                     backgroundSize: 'cover',
                     zIndex: -1,
                 }}
-            />
-            <div className = "header">
+                />
+            <div>
                 <h2>Present Timeline Data Rendering!</h2>
+
+                {/*<h2>{past.era}</h2>
+                <h2>{past.era}</h2>*/}
             </div>
             
             <Link to="/">

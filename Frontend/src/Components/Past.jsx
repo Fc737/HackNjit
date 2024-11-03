@@ -11,12 +11,16 @@ function Past() {
     const [past, setPastData] = useState('');
     const [error, setError] = useState(false); 
 
+    
+
     useEffect(() => {
         async function getData() {
             try {
                 await new Promise(resolve => setTimeout(resolve, 3000));
-                //const data = await axios.get('https://localhost:8000/testing');
+                //const data = await axios.get('https://localhost:8000/api/eras/?format=json');
+                //const events = await axios.get('https://localhost:8000/api/eras/?format=json');
 
+                //setPastData(jsonObject);
                 //Testing for valid data fetching
                 const data = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
                 setPastData(data);
@@ -24,7 +28,6 @@ function Past() {
             } catch (e) {
                 console.error(e);
                 setError(true);
-                setLoading(false); 
             }
         }
         getData();
@@ -61,7 +64,7 @@ function Past() {
                 <div
                 className="bg"
                 style={{
-                    backgroundImage: `url(${futureImage})`,
+                    backgroundImage: `url(${pastImage})`,
                     height: '100vh',
                     width: '100vw',
                     position: 'fixed',
@@ -110,6 +113,9 @@ function Past() {
                 />
             <div>
                 <h2>Past Timeline Data Rendering!</h2>
+
+                {/*<h2>{past.era}</h2>
+                <h2>{past.era}</h2>*/}
             </div>
             
             <Link to="/">
